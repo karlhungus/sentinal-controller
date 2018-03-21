@@ -1,0 +1,12 @@
+apiVersion: sentinal-controller.sentinalcontroller/v1alpha1
+kind: SentinalDeployment
+metadata:
+  name: kuard-canary
+spec:
+  stableDeploymentName: kuard
+  stableReplicas: 2
+  canaryDeploymentName: kuard-canary
+  canaryReplicas: 1
+  containers:
+  - name: kuard
+    image: kuard-amd64:3

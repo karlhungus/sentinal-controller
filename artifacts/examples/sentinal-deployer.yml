@@ -1,0 +1,14 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: sentinaldeployments.sentinal-controller.sentinalcontroller
+spec:
+  group: sentinal-controller.sentinalcontroller
+  version: v1alpha1
+  scope: Namespaced
+  names:
+    plural: sentinaldeployments
+    singular: sentinal
+    kind: SentinalDeployment
+    shortNames:
+    - sd
